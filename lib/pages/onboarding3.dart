@@ -55,11 +55,11 @@ class Onboarding3Page extends StatelessWidget {
                   child: TextButton(
                     
                     onPressed: () {
-                      Navigator.pushNamed(context, '/hold');
+                      Navigator.pushNamed(context, '/signup');
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4), // <-- Radius
+                        borderRadius: BorderRadius.circular(4), 
                       ),
                       backgroundColor: const Color.fromARGB(255, 5, 96, 250),
                     ), 
@@ -91,7 +91,7 @@ class Onboarding3Page extends StatelessWidget {
                     ),
                     recognizer: TapGestureRecognizer()
                     ..onTap =() {
-                      Navigator.pushNamed(context, '/hold');
+                      Navigator.pushNamed(context, '/signin');
                     }
                   )
                 ]

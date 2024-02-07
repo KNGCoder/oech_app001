@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:oech_app001/pages/holder.dart';
+import 'package:oech_app001/pages/loginIn_page.dart';
 import 'package:oech_app001/pages/onboarding1.dart';
 import 'package:oech_app001/pages/onboarding3.dart';
 import 'package:oech_app001/pages/onboarding4.dart';
+import 'package:oech_app001/pages/signUp_page.dart';
 import 'package:oech_app001/pages/splash.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +20,10 @@ class MyApp extends StatelessWidget {
         '/onb1':(context) => const Onboarding1Page(),
         '/onb3':(context) => const Onboarding3Page(),
         '/onb4':(context) => const Onboarding4Page(),
-        '/hold':(context) => const HolderPage()
+        '/hold':(context) => const HolderPage(),
+        '/signup':(context) => const SignUpPage(),
+        '/signin':(context) => const LoginPage(),
+
       },
     );
   }
