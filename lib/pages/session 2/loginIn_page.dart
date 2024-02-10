@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:oech_app001/widgets/text_field_widget.dart';
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(                        
@@ -15,21 +15,21 @@ class _SignUpPageState extends State<SignUpPage> {
         scrollDirection: Axis.vertical,
 
       child: Padding(
-        padding: EdgeInsets.only(left: 24, top: 70),
+        padding: EdgeInsets.only(left: 24, top: 170),
         child: SizedBox(
           width: 310,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                  Text('Create an account',
+                  Text('Welcome Back',
                   style: TextStyle(
                     fontSize: 24,
                     color: Color.fromRGBO(58, 58, 58, 1),
                     fontWeight: FontWeight.w500,
                   )),
                 
-                Text('Complete the sign up process to get started',
+                Text('Fill in your email and password to continue',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -38,27 +38,13 @@ class _SignUpPageState extends State<SignUpPage> {
                 
                 SizedBox(height: 18),
 
-                 TextFieldWidget(
-                  textTitle: 'Full name',
-                   textTitleColor: Color.fromRGBO(167, 167, 167, 1),
-                    textSize: 14,
-                     height: 10,
-                     hintText: 'ivanov ivan',
-                     ),
+                
 
-                  TextFieldWidget(
-                  textTitle: 'Phone Number',
-                   textTitleColor: Color.fromRGBO(167, 167, 167, 1),
-                    textSize: 14,
-                     height: 40,
-                     hintText: '+7(999)999-99-99',
-                     ),
 
                   TextFieldWidget(
                   textTitle: 'Email Address',
                    textTitleColor: Color.fromRGBO(167, 167, 167, 1),
                     textSize: 14,
-                     height: 40,
                      hintText: '***********@mail.com',
                      ),  
 
@@ -66,18 +52,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   textTitle: 'Password',
                    textTitleColor: Color.fromRGBO(167, 167, 167, 1),
                     textSize: 14,
-                     height: 40,
                      hintText: '**********',
                      ),    
 
-                 TextFieldWidget(
-                  textTitle: 'Confirm Password',
-                   textTitleColor: Color.fromRGBO(167, 167, 167, 1),
-                    textSize: 14,
-                     height: 40,
-                     hintText: '**********',
-                     ),
-              ],
+                ],
               
             ),
           ),
