@@ -16,39 +16,60 @@ class TransactionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      child: Row(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                summa,
-                style: TextStyle(
-                  color: sumColor, 
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16,),
-              ),
-              Text(
-                shop,
-                style: TextStyle(
-                  color: Color(0xff3a3a3a), 
-                  fontWeight: FontWeight.w500, 
-                  fontSize: 12,),
-              )
-            ],
-          ),
-          Text(
-            day,
-            style: TextStyle(
-              color: Color(0xffa7a7a7),
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
+    return Container(
+        height: 50,
+        padding: EdgeInsets.all(6),
+        margin: EdgeInsets.all(4) ,
+        decoration: BoxDecoration(
+          color: Color(0xffffffff),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xffcfcfcf),
+              blurRadius: 1,
+              offset: Offset(0 , 4)
+            )]
+        ),
+        child: Container(
+          child: Row(
+           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  summa,
+                  style: TextStyle(
+                    color: sumColor, 
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,),
+                ),
+                Text(
+                  shop,
+                  style: TextStyle(
+                    color: Color(0xff3a3a3a), 
+                    fontWeight: FontWeight.w500, 
+                    fontSize: 14,),
+                )
+              ],
             ),
-          )
-        ],
-      )
-    );
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  day,
+                  style: TextStyle(
+                    color: Color(0xffa7a7a7),
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            )
+          ],
+          
+        )
+        )
+        
+      );
   }
 }
