@@ -17,9 +17,9 @@ class TransactionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 50,
-        padding: EdgeInsets.all(6),
-        margin: EdgeInsets.all(4) ,
+        height: 60,
+        padding: EdgeInsets.all(9),
+        margin: EdgeInsets.all(3) ,
         decoration: BoxDecoration(
           color: Color(0xffffffff),
           boxShadow: [

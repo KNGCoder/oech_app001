@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TextFieldWidget extends StatelessWidget {
+class S2TextFieldWidget extends StatelessWidget {
   final String textTitle;
   final String hintText;
   final bool isObsText;
@@ -8,7 +8,7 @@ class TextFieldWidget extends StatelessWidget {
   final double textSize;
   final TextInputType inputType;
 
-  const TextFieldWidget(
+  const S2TextFieldWidget(
       {super.key,
       required this.textTitle,
       required this.hintText,

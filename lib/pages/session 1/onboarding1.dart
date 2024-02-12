@@ -80,8 +80,8 @@ class Onboarding1Page extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.pushNamed(context, '/onb4');
-                      Navigator.pushNamed(context, '/wall');
+                      Navigator.pushNamed(context, '/onb4');
+                      // Navigator.pushNamed(context, '/wall');
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(

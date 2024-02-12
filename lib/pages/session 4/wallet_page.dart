@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:oech_app001/widgets/custom_bottom_bar.dart';
 import 'package:oech_app001/widgets/top_up_button.dart';
 import 'package:oech_app001/widgets/trans_history_widget.dart';
-import '';
+
 
 class WalletPage extends StatelessWidget {
   const WalletPage({super.key});
@@ -25,7 +26,8 @@ class WalletPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -75,7 +77,7 @@ class WalletPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(width: 90,),
+                  SizedBox(width: 80,),
                     Container(
                     height: 24,
                     width: 24,
@@ -172,6 +174,22 @@ class WalletPage extends StatelessWidget {
                       sumColor: Color(0xffed3a3a), 
                       shop: 'Delivery fee', 
                       day: 'June 17, 2022'),
+                   
+                   TransactionWidget(
+                      summa: 'N2,000.00', 
+                      sumColor: Color(0xff35b369), 
+                      shop: 'Lalalalala', 
+                      day: 'July 4, 2022'),
+                   TransactionWidget(
+                      summa: '-N3,000.00', 
+                      sumColor: Color(0xffed3a3a), 
+                      shop: 'Third Delivery', 
+                      day: 'July 1, 2022'),
+                   TransactionWidget(
+                      summa: 'N1,000.00', 
+                      sumColor: Color(0xff35b369), 
+                      shop: 'Another One', 
+                      day: 'June 27, 2022'),
                  ],
                ),
              ),
@@ -179,6 +197,9 @@ class WalletPage extends StatelessWidget {
           ],
         ),
       ),
+      ),
+      // BOTTOM BAR
+      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }
