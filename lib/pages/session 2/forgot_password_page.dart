@@ -46,46 +46,6 @@ class _ForgotPasswoprdPageState extends State<ForgotPasswoprdPage> {
                 ),
               ),
 
-              // //Кнопка соглашения
-              // Container(
-              //   padding: EdgeInsets.zero,
-              //   child: Row(
-              //     children: <Widget>[
-              //       SizedBox(
-              //         child: Checkbox(
-              //             activeColor: const Color.fromARGB(255, 5, 96, 250),
-              //             value: checkedValue,
-              //             onChanged: (newValue) {
-              //               setState(() {
-              //                 checkedValue = newValue!;
-              //               });
-              //             }),
-              //       ),
-
-              //       //Пользовательское соглашение:
-
-              //       const Row(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: [
-              //           Text('Remember password',
-              //               style: TextStyle(
-              //                   fontSize: 14,
-              //                   fontWeight: FontWeight.w400,
-              //                   color: Color.fromRGBO(167, 167, 167, 1))),
-              //           SizedBox(width: 50),
-              //           Text(
-              //             'forgot password',
-              //             style: TextStyle(
-              //                 fontSize: 14,
-              //                 fontWeight: FontWeight.w500,
-              //                 color: Color.fromARGB(255, 5, 96, 250)),
-              //           ),
-              //         ],
-              //       ),
-              //     ],
-              //   ),
-              // ),
-
               const SizedBox(height: 56),
               Column(
                 children: [

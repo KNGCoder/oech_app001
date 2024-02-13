@@ -18,6 +18,9 @@ class _SendPageState extends State<SendPackage> {
   final TextEditingController _countryControllerDD = TextEditingController();
   final TextEditingController _phoneControllerDD = TextEditingController();
   final TextEditingController _othersControllerDD = TextEditingController();
+  final TextEditingController _itemsController = TextEditingController();
+  final TextEditingController _kgController = TextEditingController();
+  final TextEditingController _worthController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +74,7 @@ class _SendPageState extends State<SendPackage> {
                       Container(
                         height: 18,
                         width: 18,
-                        child: SvgPicture.asset('assets/images/s4_orig_detail.svg'),),
+                        child: SvgPicture.asset('assets/images/s4_des_details.svg'),),
                       SizedBox(width: 10,),
                       Text(
                           'Destination Details',
@@ -91,11 +94,11 @@ class _SendPageState extends State<SendPackage> {
                    SizedBox(height: 25,),
                   Row(
                      children: [
-                      Container(
-                        height: 18,
-                        width: 18,
-                        child: SvgPicture.asset('assets/images/s4_orig_detail.svg'),),
-                      SizedBox(width: 10,),
+                      // Container(
+                      //   height: 18,
+                      //   width: 18,
+                      //   child: SvgPicture.asset('assets/images/s4_pack_detailes.svg'),),
+                      // SizedBox(width: 10,),
                       Text(
                           'Package Details',
                           textAlign: TextAlign.left,
@@ -107,36 +110,100 @@ class _SendPageState extends State<SendPackage> {
                       ],
                     ),
                     SizedBox(height: 10,),
-                   SendPackageWidget(controller: _addressController, hintText: 'Address'),
-                   SendPackageWidget(controller: _countryController, hintText: 'State,Country'),
-                   SendPackageWidget(controller: _phoneController, hintText: 'Phone number'),
+                   SendPackageWidget(controller: _itemsController, hintText: 'package items'),
+                   SendPackageWidget(controller: _kgController, hintText: 'Weight of item(kg)'),
+                   SendPackageWidget(controller: _worthController, hintText: 'Worth of items'),
                    SizedBox(height: 25),
-                   Row(
-                     children: [
-                      // Container(
-                      //   height: 18,
-                      //   width: 18,
-                      //   child: SvgPicture.asset('assets/images/s4_orig_detail.svg'),),
-                      // SizedBox(width: 10,),
-                      Text(
-                          'Select delivery type',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontSize: 22,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              'Select delivery type',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 22,
+                                color: Colors.black,
+                              ),
+                            ),
+                        ],
+                      ),
+                      
                     SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: 160,
+                              height: 80,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0xffcfcfcf),
+                                    blurRadius: 1,
+                                    offset: const Offset(0,4), 
+                                  ),
+                                ],
+                                color: Color(0xff0560fa),
+                                borderRadius: BorderRadius.circular(8)
+                              ),
+                          child:
+                            Column(
+                              children: [
+                                IconButton(
+                                  onPressed: () {}, 
+                                icon: Icon(Icons.access_time),
+                                color: Colors.white,
+                                ),
+                                Text('Instant delivery',
+                                style: TextStyle(
+                                  color: Color(0xffffffff),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                ),
+                                )
+                              ],
+                            ),
+                            ) ,
+                            Container(
+                          
+                          width: 160,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0xffcfcfcf),
+                                blurRadius: 1,
+                                offset: const Offset(0,4), 
+                              ),
+                            ],
+                            color: Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Column(
+                            children: [
+                              IconButton(
+                                onPressed: () {}, 
+                              icon: SvgPicture.asset('assets/images/s4_calendar.svg'),
+                              color: Color(0xffa7a7a7),),
+                              Text('Scheduled delivery',
+                              style: TextStyle(
+                                  color: Color(0xffa7a7a7),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                ),)
+                            ],
+                          ),  
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 16),
                 ],
-              ),
-              ]
-        )
-            ),
+              )
+            ],
           ),
-       
-      
+              
+        )
+      ),
       bottomNavigationBar: CustomBottomBar(),
     );
   }

@@ -35,7 +35,9 @@ class SendPackageWidget extends StatelessWidget {
           // filled: true,
           hintText: hintText,
           fillColor: Colors.white,
-          hintStyle: const TextStyle(color: Color(0xffcfcfcf), fontSize: 19),
+          hintStyle: const TextStyle(
+            color: Color(0xffcfcfcf), 
+            fontSize: 19),
         ),
       ),
       // Padding(
